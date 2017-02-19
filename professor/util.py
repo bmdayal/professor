@@ -138,7 +138,7 @@ def connect_to(database):
     else:
         host = database['hostname']
         port = 27017
-    conn = pymongo.Connection(
+    conn = pymongo.MongoClient(
         host=host,
         port=port,
         network_timeout=2,
